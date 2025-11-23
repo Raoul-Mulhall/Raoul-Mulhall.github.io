@@ -9,24 +9,31 @@ function getComputer() {
     return choices[Math.floor(Math.random() * 3)];
 } //Makes computer return random choice 
 
+let round = 0;
+let roundTotal = 3;
+
+
 function play(playerChoice) {
+
+    if (round === roundTotal) {
+        document.getElementById("result").innerHTML = "Game Over!!!"
+        return;
+    }
+
     const computerChoice = getComputer(); //Calls computer choice into variable
     let result = ""; //Defines result variable as string
 
 
-
-    //If statement sets conditions for winning, losing and drawing
-
-    if (playerChoice === computerChoice) {
-        result = "It was a tie!!!";
-
-    }
-    else if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
+    if ((playerChoice === "rock" && computerChoice === "scissors") ||
         (playerChoice === "paper" && computerChoice === "rock") ||
         (playerChoice === "scissors" && computerChoice === "paper")
     ) {
         result = "You win!!!";
+
+
+    }
+    else if (playerChoice === computerChoice) {
+        result = "It was a tie!!!";
 
     }
     else {
@@ -34,8 +41,13 @@ function play(playerChoice) {
 
     }
 
+    round = round + 1;
+
+
     //Creates result message and send to result div box
     document.getElementById("result").innerHTML = "You chose " + playerChoice + ", the computer chose " + computerChoice + ", " + result;
+
+
 
 
 }

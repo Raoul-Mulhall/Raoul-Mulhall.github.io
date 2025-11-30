@@ -35,7 +35,7 @@ body {
         3px -3px 0 black,
         -3px 3px 0 black,
         3px 3px 0 black, ;
-    font-size: 320%;
+    font-size: 250%;
     font-family: sans-serif;
     width: 70%;
     background-image: url(images/TextBox.jpg);
@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 220px;
     text-align: center;
 }
 
@@ -68,6 +68,7 @@ body {
 .clickers {
     font-size: 200%;
     cursor: pointer;
+    width: fit-content;
     background-image: url(images/TextBox.jpg);
     background-size: contain;
     color: aliceblue;
@@ -88,4 +89,51 @@ body {
     color: aliceblue;
     border-color: darkred;
     transition: all 0.5s ease;
+}
+
+.results {
+    margin: auto;
+    width: 60px;
+    font-size: 100%;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(000, 0.1);
+    width: 250px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
